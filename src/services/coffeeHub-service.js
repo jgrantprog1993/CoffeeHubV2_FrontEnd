@@ -110,6 +110,17 @@ export class CoffeeHubService {
     }
   }
 
+  async getCoffeeShopByUserId(id) {
+    try {
+      const response = await axios.get(this.baseUrl + "/api/coffeeShop/user/" + id +"");
+      console.log('getCoffeeShopByUserId Response-> '+ response)
+      console.log('getCoffeeShopByUserId Response.Data-> '+ response.data)
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
   async getLocations() {
     try {
       const response = await axios.get(this.baseUrl + "/api/locations");
@@ -136,4 +147,17 @@ export class CoffeeHubService {
       return [];
     }
   }
+
+  async getAllUsers(){
+    try{
+
+      const response = await axios.get(this.baseUrl + "/api/users")
+      console.log('response ->' + response)
+      console.log('response.data ->' + response.data)
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
 }
+

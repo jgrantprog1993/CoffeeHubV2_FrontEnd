@@ -5,6 +5,7 @@
         import CoffeeShopList from "../components/CoffeeShopList.svelte";
         import TitleBar from "../components/TitleBar.svelte";
         import MainNavigator from "../components/MainNavigator.svelte";
+        import CoffeeShopByUsersChart from "../components/CoffeeShopByUsersChart.svelte";
         import CoffeeShopperCountyCharts from "../components/CoffeeShopperCountyCharts.svelte"
 </script>
       
@@ -17,4 +18,7 @@
         </div>
       </div>
 
+      
+      <CoffeeShopByUsersChart/>
+      <br/>
       <CoffeeShopperCountyCharts/>
