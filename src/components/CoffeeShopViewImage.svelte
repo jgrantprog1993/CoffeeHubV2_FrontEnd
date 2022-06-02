@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import {createEventDispatcher} from 'svelte'
     const dispatch = createEventDispatcher()
     import {getContext, onMount} from 'svelte'
@@ -10,6 +12,7 @@
     let url = ``;
 
     export function updateImage(ImageUrl){
+        
         coffeeShop.img = ImageUrl;
     }
 
@@ -25,6 +28,7 @@
     function deleteImage(){
 
         //coffeeHubService.deleteImage(coffeeShop._id, coffeeShop.img)
+        
         coffeeHubService.deleteImage(coffeeShop._id)
         dispatch("message", {img:""})
         
