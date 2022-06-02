@@ -148,6 +148,18 @@ export class CoffeeHubService {
     }
   }
 
+  async deleteImage(id) {
+    try {
+      console.log('CoffeeShop ID is ->' + id);
+      //console.log('Image ID is ->' + img);
+      const response = await axios.post(this.baseUrl + "/api/coffeeShop/"+id +"/deleteImage");
+      console.log('Response.data is ->' + response.data);
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
   async getAllUsers(){
     try{
 
