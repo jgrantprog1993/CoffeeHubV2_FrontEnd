@@ -15,6 +15,7 @@
 
   function coffeeShopMade(event) {
     console.log(event.detail.coffeeShop);
+    console.log("Event Happened should be updating Map!!");
     coffeeShopMap.addCoffeeShopMarker(event.detail.coffeeShop);
 }
   </script>
