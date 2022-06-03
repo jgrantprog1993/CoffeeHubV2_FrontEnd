@@ -18,7 +18,7 @@
     async function uploadFile(file ,  length){
         var formdata = new FormData();
         formdata.append("file", file , file.name)
-        console.log('LOGGING URL? -> ' + file.name)
+        // console.log('LOGGING URL? -> ' + file.name)
         formdata.append('upload_preset', unsignedUploadPreset);
         var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
         var response = await fetch(url, {

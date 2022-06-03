@@ -4,10 +4,10 @@
     export let title = "";
     export let subTitle = "";
 </script>
-  
+
   <div class="box has-text-centered columns m-2">
     <div class="column">
-      <img src="{Icon}" width="60" alt="img"/>
+      <img src="{Icon}" width="100" alt="img"/>
     </div>
     <div class="column">
       <div class="title is-5"> {title} </div>
@@ -17,10 +17,11 @@
         <i class="fas fa-search fa-3x" style="color:rgb(95, 96, 173)"></i>
         {#if $user.email}
           <div class="is-size-7">CoffeeHub</div>
-          <div class="is-size-7">{$user.email} </div>
+          <div class="is-size-7">Logging In User: {$user.email} </div>
           {:else}
           
           <div class="is-size-7">CoffeeHub</div>
+          <div class="is-size-7">Logging In User: N/A </div>
         {/if}
       
     </div>

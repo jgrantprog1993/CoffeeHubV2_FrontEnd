@@ -18,11 +18,11 @@
 
     onMount(async () => {
             url = window.location.href
-            //  console.log(url)
+            //  // console.log(url)
             let parsedURL = url.substring(35)
-            // console.log(parsedURL);
+            // // console.log(parsedURL);
             coffeeShop = await coffeeHubService.getCoffeeShopsById(parsedURL);
-            console.log(coffeeShop._id)
+            // console.log(coffeeShop._id)
         });
 
     function deleteImage(){

@@ -12,11 +12,11 @@
     
     onMount(async () => {
             url = window.location.href
-            //  console.log(url)
+            //  // console.log(url)
             let parsedURL = url.substring(35)
-            // console.log(parsedURL);
+            // // console.log(parsedURL);
             coffeeShop = await coffeeHubService.getCoffeeShopsById(parsedURL);
-            console.log('NEED TO Check this HERE ------> ' + coffeeShop._id)
+            // console.log('NEED TO Check this HERE ------> ' + coffeeShop._id)
         });
 
     

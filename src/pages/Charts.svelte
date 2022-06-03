@@ -14,7 +14,7 @@
         let unique ={}
         function toggleChartType() {
           chartTypeToggle*=-1;
-          console.log( 'chartTypeToggle =>' +  chartTypeToggle)
+          // console.log( 'chartTypeToggle =>' +  chartTypeToggle)
           unique ={}
         }
 
