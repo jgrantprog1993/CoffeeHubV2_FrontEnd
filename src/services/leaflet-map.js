@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as L from "leaflet";
 
 export class LeafletMap {
@@ -68,9 +69,9 @@ export class LeafletMap {
     let group = {};
     let marker = L.marker([location.lat, location.lng]);
     if (popupText) {
-      var popup = L.popup({autoClose: false, closeOnClick: false});
+      var popup = L.popup({autoClose: true, closeOnClick: true});
       popup.setContent(popupText);
-      marker.bindPopup(popup);
+      marker.bindPopup(popup, {closeButton: false});
     }
     if (!this.overlays[layerTitle]) {
       group = L.layerGroup([]);

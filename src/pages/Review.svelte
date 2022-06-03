@@ -5,7 +5,8 @@
     import ReviewForm from "../components/ReviewForm.svelte";
     import TitleBar from "../components/TitleBar.svelte";
     import MainNavigator from "../components/MainNavigator.svelte";
-    import CoffeeShopMap from "../components/CoffeeShopMap.svelte";
+    
+    import CoffeeShopMapSingle from "../components/CoffeeShopMapSingle.svelte";
 
     function coffeeShopAdded(event) {
     console.log(event.detail.coffeeShop);
@@ -31,7 +32,7 @@
   
   <div class="columns is-vcentered">
     <div class="column has-text-centered">
-      <CoffeeShopMap bind:this={coffeeShopMap}/>
+      <CoffeeShopMapSingle bind:this={coffeeShopMap}/>
     </div>
     <div class="column box has-text-centered">
       <h1 class="title is-4">Add CoffeeShop</h1>

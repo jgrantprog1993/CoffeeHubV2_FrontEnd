@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import {createEventDispatcher, getContext, onMount} from 'svelte'
     import CoffeeShopViewImage from "../components/CoffeeShopViewImage.svelte";
     // import { user } from 'src/stores';

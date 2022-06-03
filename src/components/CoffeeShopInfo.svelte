@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import {getContext, onMount} from 'svelte'
     //  export let params = {};
     const coffeeHubService = getContext("CoffeeHubService");

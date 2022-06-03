@@ -91,7 +91,7 @@
   <div class="columns">
     <div class="column box has-text-centered">
       <h1 class="title is-4">No. of Reviews per User</h1>
-      <ChartY data={data} type="pie" />
+      <ChartY data={data} type="bar" />
     </div>
     
   </div>

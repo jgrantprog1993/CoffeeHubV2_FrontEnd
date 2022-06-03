@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import TitleBar from "../components/TitleBar.svelte";
     import MainNavigator from "../components/MainNavigator.svelte";
     import CoffeeShopInfo from "../components/CoffeeShopInfo.svelte";
@@ -17,6 +19,9 @@
     let parsedURL = '';
     let unique = {};
     let toggle =1;
+
+    import CoffeeShopMapTest from "../components/CoffeeShopMapTest.svelte";
+
     onMount(async () => {
         url = window.location.href
         //  console.log(url)
@@ -73,17 +78,21 @@
   <div class="column has-text-centered">
     {#key unique}
       <CoffeeShopViewImage on:message={restart} bind:this ={updateImageNew}/>
+      
     {/key}
   </div>
   <div class="column box has-text-centered">
     <h1 class="title is-4">Coffee Shop Information</h1>
     <CoffeeShopInfo/>
-    
+    <h1 class="title is-4">Weather @ Location </h1>
+    <CoffeeShopMapTest {coffeeShop}/>
+    <br/>
     <ImageUpload on:message={updateImage}/>
     
   </div>
   
   
 </div>
+
   
  
