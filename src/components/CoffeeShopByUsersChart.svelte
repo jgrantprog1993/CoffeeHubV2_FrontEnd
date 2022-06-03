@@ -37,13 +37,13 @@
        allUsers = await coffeeHubService.getAllUsers();
        allCoffeeShops = await coffeeHubService.getCoffeeShops();
 
-       console.log('ALL Coffee Shops ->' + allCoffeeShops);
+       // console.log('ALL Coffee Shops ->' + allCoffeeShops);
        //https://gist.github.com/joeytwiddle/37d2085425c049629b80956d3c618971
        
        for(const user of allUsers){
         allUsersEmail[i] = user.email;
         allUsersId[i] = user._id;  
-            console.log('Made it here -> ' + allUsersEmail[i] + ' ID =>' + allUsersId[i] );
+            // console.log('Made it here -> ' + allUsersEmail[i] + ' ID =>' + allUsersId[i] );
             data.labels[i] = allUsersEmail[i];
             i+=1;
         };
@@ -53,7 +53,7 @@
             allCoffeeShopsRating[j] = coffeeShop.rating;
             allCoffeeShopsUserId[j] = coffeeShop.user._id;
 
-            console.log('Made it here CS*** -> ' + allCoffeeShopsName[j] + ' ID =>' + allCoffeeShopsId[j] + ' Rating =>' + allCoffeeShopsRating[j] + ' UserID =>' + allCoffeeShopsUserId[j]);
+            //console.log('Made it here CS*** -> ' + allCoffeeShopsName[j] + ' ID =>' + allCoffeeShopsId[j] + ' Rating =>' + allCoffeeShopsRating[j] + ' UserID =>' + allCoffeeShopsUserId[j]);
             j+=1;
         }
 
@@ -70,19 +70,19 @@
                
             }
             coffeeShopsPerUserCount[k] = countforGraph;
-            data.datasets[0].values[k] = countforGraph;
-            console.log('coffeeShopsPerUserCount = ' + coffeeShopsPerUserCount[k] + 'countforGraph = ' + countforGraph + ' k ' + k)
+            //data.datasets[0].values[k] = countforGraph;
+            //console.log('coffeeShopsPerUserCount = ' + coffeeShopsPerUserCount[k] + 'countforGraph = ' + countforGraph + ' k ' + k)
             k+=1;
+            countforGraph = 0;
         }
         
-        console.log('Made it here -> ' + allUsersEmail + ' ID =>' + allUsersId );
-        console.log('Made it here CS*** -> ' + allCoffeeShopsName + ' ID =>' + allCoffeeShopsId + ' Rating =>' + allCoffeeShopsRating + ' UserID =>' + allCoffeeShopsUserId);
+         //console.log('Made it here -> ' + allUsersEmail + ' ID =>' + allUsersId );
+         //console.log('Made it here CS*** -> ' + allCoffeeShopsName + ' ID =>' + allCoffeeShopsId + ' Rating =>' + allCoffeeShopsRating + ' UserID =>' + allCoffeeShopsUserId);
 
     });
 
-    console.log('allUsersEmail => ' + allUsersEmail);
-    console.log('coffeeShopsPerUserCount => ' + coffeeShopsPerUserCount);
-   ;
+     //console.log('allUsersEmail => ' + allUsersEmail);
+    // console.log('coffeeShopsPerUserCount => ' + coffeeShopsPerUserCount);
 
 
   </script>

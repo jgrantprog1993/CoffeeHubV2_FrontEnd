@@ -18,19 +18,19 @@
 
     onMount(async () => {
         url = window.location.href
-        //  console.log(url)
+        //  // console.log(url)
         parsedURL = url.substring(35)
-        // console.log(parsedURL);
+        // // console.log(parsedURL);
         coffeeShop = await coffeeHubService.getCoffeeShopsById(parsedURL);
-        // console.log(coffeeShopId)
+        // // console.log(coffeeShopId)
     });
     
     function handleSingleUpload(event){
-		console.log("handleSingleUpload returned url ==> ", event.detail);
+		// console.log("handleSingleUpload returned url ==> ", event.detail);
     img = event.detail;
-    console.log('Image => ' + img);
+    // console.log('Image => ' + img);
         // @ts-ignore
-    console.log('CS_ID => ' + coffeeShop._id);
+    // console.log('CS_ID => ' + coffeeShop._id);
     // @ts-ignore
     coffeeHubService.addImageToCoffeeShop(coffeeShop._id, img);
     dispatch("message", {
@@ -40,14 +40,14 @@
 	}
 	
 	function handleMultipleUpload(event) {
-		console.log("handleMultipleUpload returned urls ==> ", event.detail)
+		// console.log("handleMultipleUpload returned urls ==> ", event.detail)
     img = event.detail;
-    console.log('Images => ' + img);
+    // console.log('Images => ' + img);
     coffeeHubService.addImageToCoffeeShop(parsedURL, img)
 	}
 
   export function updateImage(event) {
-    console.log(event.detail.img);
+    // console.log(event.detail.img);
     coffeeHubService.updateImage(event.detail.img);
   }
 

@@ -17,7 +17,7 @@
     };
     let map1 = null;
     let map2 = null;
-  
+    let email = '';
     onMount(async () => {
         map1 = new LeafletMap("coffeeShop-map", mapConfig1);
         map1.showZoomControl();
@@ -68,13 +68,13 @@
 });
 
     export function addCoffeeShopMarker(coffeeShop) {
-        
-        const coffeeShopStr = `<a href="/#/coffeeShop/${coffeeShop._id}" >${coffeeShop.coffeeShopName}<a/> 
-        Rating : ${coffeeShop.rating.toString()}/5 <i class="fas fa-star" style="color:rgb(255, 165, 0)"></i>`;
+   
+        const coffeeShopStr = `<a href="/#/coffeeShop/${coffeeShop._id}" >${coffeeShop.coffeeShopName}<a/> <br/>
+        Rating : ${coffeeShop.rating.toString()}/5 <i class="fas fa-star" style="color:rgb(255, 165, 0)"></i><br/>`;
         //map1.addMarker({lat: coffeeShop.lat, lng: coffeeShop.lng}, coffeeShopStr, "CoffeeShops");
         //map1.moveTo(8, {lat: coffeeShop.lat, lng: coffeeShop.lng});
-        console.log('coffeeShop.location.locationName => ' + coffeeShop.location.locationName)
-        console.log('coffeeShop.location => ' + coffeeShop.location)
+         console.log('coffeeShop.location.locationName => ' + coffeeShop.location.locationName)
+         console.log('coffeeShop.location => ' + coffeeShop.location)
         
         if(coffeeShop.location.locationName == "Antrim" || coffeeShop.location == "Antrim" ) {
             map1.addMarker({lat: coffeeShop.lat, lng: coffeeShop.lng}, coffeeShopStr, "Antrim");

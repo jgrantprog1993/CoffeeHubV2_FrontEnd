@@ -12,9 +12,9 @@
     const coffeeHubService = getContext("CoffeeHubService")
     onMount(async () => {
         url = window.location.href
-        //  console.log(url)
+        //  // console.log(url)
         let parsedURL = url.substring(35)
-        console.log('PArsed Url -> ' + parsedURL);
+        // console.log('PArsed Url -> ' + parsedURL);
         coffeeShop = await coffeeHubService.getCoffeeShopsById(parsedURL);
       
       }

@@ -7,7 +7,7 @@
   
     onMount(async () => {
       coffeeShopList = await coffeeHubService.getCoffeeShops();
-      // console.log(coffeeShopList)
+      // // console.log(coffeeShopList)
     });
 </script>
   

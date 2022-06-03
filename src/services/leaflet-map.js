@@ -1,6 +1,14 @@
 // @ts-nocheck
 import * as L from "leaflet";
-
+//Didnt Work
+// var coffeeIcon = L.icon({
+//     iconUrl: '../../assets/coffeeIconWhite.png',
+//     // src\assets\coffeeIconWhite.png
+//     // src\services\leaflet-map.js
+//     iconSize:     [38,95],
+//     iconAnchor:     [22,94],
+//     popupAnchor:  [-3,-76]
+// }) 
 export class LeafletMap {
   imap = {};
   control = {};
@@ -19,7 +27,7 @@ export class LeafletMap {
         "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
     }),
   };
-
+ 
   constructor(id, descriptor, activeLayer = "") {
     let defaultLayer = this.baseLayers.Terrain;
     if (activeLayer) {
