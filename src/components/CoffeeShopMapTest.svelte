@@ -24,7 +24,7 @@ let String = '';
         // console.log('PArsed Url -> ' + parsedURL);
         coffeeShop = await coffeeHubService.getCoffeeShopsById(parsedURL);
         //Thanks to Adam Gibbons for the help with getting around the CORS issue and using https://cors-anywhere.herokuapp.com //
-        String = ' https://glacial-cliffs-16174.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat='+coffeeShop.lat+'&lon='+ coffeeShop.lng+'&appid='+ appId;
+        String = ' https://morning-reef-56940.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat='+coffeeShop.lat+'&lon='+ coffeeShop.lng+'&appid='+ appId;
          // console.log('LAST ONE !! -> ' + String)
         currentWeather = await axios.get(String, config).then((response) => {
           return response.data;
