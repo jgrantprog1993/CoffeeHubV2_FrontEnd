@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import download2 from "/src/assets/download2.jpg";
     import TitleBar from "../components/TitleBar.svelte";
     import MainNavigator from "../components/MainNavigator.svelte";

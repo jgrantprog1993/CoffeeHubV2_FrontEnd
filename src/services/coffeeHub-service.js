@@ -5,7 +5,7 @@ import {coffeeShop} from "../stores";
 
 
 export class CoffeeHubService {
-  baseUrl = "http://iewalbjw24b3:4000";
+  baseUrl = "https://polar-beach-34658.herokuapp.com";
 
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -84,7 +84,7 @@ export class CoffeeHubService {
   async getCoffeeShops() {
     try {
       const response = await axios.get(this.baseUrl + "/api/coffeeShop");
-      console.log(response);
+      // console.log(response);
       return response.data;
     } catch (error) {
       return [];
@@ -94,7 +94,7 @@ export class CoffeeHubService {
   async getCoffeeShopsById(id) {
     try {
       const response = await axios.get(this.baseUrl + "/api/coffeeShop/"+id+"");
-      console.log(response);
+      // console.log(response);
       return response.data;
     } catch (error) {
       return [];
@@ -104,6 +104,17 @@ export class CoffeeHubService {
   async getReviews() {
     try {
       const response = await axios.get(this.baseUrl + "/api/coffeeShop");
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getCoffeeShopByUserId(id) {
+    try {
+      const response = await axios.get(this.baseUrl + "/api/coffeeShop/user/" + id +"");
+      // console.log('getCoffeeShopByUserId Response-> '+ response)
+      // console.log('getCoffeeShopByUserId Response.Data-> '+ response.data)
       return response.data;
     } catch (error) {
       return [];
@@ -129,11 +140,36 @@ export class CoffeeHubService {
       coffeeShop.set({
         img: response.data.img,
       });
-      console.log('response ->' + response)
-      console.log('response.data ->' + response.data)
+      // console.log('response ->' + response)
+      // console.log('response.data ->' + response.data)
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async deleteImage(id) {
+    try {
+      // console.log('CoffeeShop ID is ->' + id);
+      //// console.log('Image ID is ->' + img);
+      const response = await axios.post(this.baseUrl + "/api/coffeeShop/"+id +"/deleteImage");
+      // console.log('Response.data is ->' + response.data);
+      return response.data;
+    } catch (error) {
+      return [];
+    }
+  }
+
+  async getAllUsers(){
+    try{
+
+      const response = await axios.get(this.baseUrl + "/api/users")
+      // console.log('response ->' + response)
+      // console.log('response.data ->' + response.data)
       return response.data;
     } catch (error) {
       return [];
     }
   }
 }
+

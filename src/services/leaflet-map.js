@@ -1,5 +1,14 @@
+// @ts-nocheck
 import * as L from "leaflet";
-
+//Didnt Work
+// var coffeeIcon = L.icon({
+//     iconUrl: '../../assets/coffeeIconWhite.png',
+//     // src\assets\coffeeIconWhite.png
+//     // src\services\leaflet-map.js
+//     iconSize:     [38,95],
+//     iconAnchor:     [22,94],
+//     popupAnchor:  [-3,-76]
+// }) 
 export class LeafletMap {
   imap = {};
   control = {};
@@ -18,7 +27,7 @@ export class LeafletMap {
         "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
     }),
   };
-
+ 
   constructor(id, descriptor, activeLayer = "") {
     let defaultLayer = this.baseLayers.Terrain;
     if (activeLayer) {
@@ -68,9 +77,9 @@ export class LeafletMap {
     let group = {};
     let marker = L.marker([location.lat, location.lng]);
     if (popupText) {
-      var popup = L.popup({autoClose: false, closeOnClick: false});
+      var popup = L.popup({autoClose: true, closeOnClick: true});
       popup.setContent(popupText);
-      marker.bindPopup(popup);
+      marker.bindPopup(popup, {closeButton: false});
     }
     if (!this.overlays[layerTitle]) {
       group = L.layerGroup([]);

@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import {getContext, onMount} from 'svelte'
     //  export let params = {};
     const coffeeHubService = getContext("CoffeeHubService");
@@ -8,13 +10,13 @@
     let url = ``;
     onMount(async () => {
         url = window.location.href
-        //  console.log(url)
-        let parsedURL = url.substring(35)
-        console.log('PArsed Url -> ' + parsedURL);
+        //  // console.log(url)
+        let parsedURL = url.substring(54)
+        // console.log('PArsed Url -> ' + parsedURL);
         coffeeShopId = await coffeeHubService.getCoffeeShopsById(parsedURL);
-        console.log('After err? ' + coffeeShopId)
-        console.log(coffeeShopId.location.locationName)
-        console.log(coffeeShopId.user.email)
+        // console.log('After err? ' + coffeeShopId)
+        // console.log(coffeeShopId.location.locationName)
+        // console.log(coffeeShopId.user.email)
         locationName = coffeeShopId.location.locationName;
         email = coffeeShopId.user.email;
     });
