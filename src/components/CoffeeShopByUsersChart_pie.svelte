@@ -73,6 +73,7 @@
                 data.datasets[0].values[k] = countforGraph;
                 // console.log('coffeeShopsPerUserCount = ' + coffeeShopsPerUserCount[k] + 'countforGraph = ' + countforGraph + ' k ' + k)
                 k+=1;
+                countforGraph = 0;
             }
             
             // console.log('Made it here -> ' + allUsersEmail + ' ID =>' + allUsersId );
