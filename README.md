@@ -1,5 +1,5 @@
 # Project Name: CoffeeHub 
-Full Stack Web Development - Assignment 1 
+Full Stack Web Development - Assignment 2 
 ## Project Description: 
 CoffeeHubV2 is a Front-End focused Svelte application. This implementation hits the 'Excellent' Standard of the of the ruberic + 2 items of the 'outstanding' class.
 the remaining 3 items in the ruberic are included in the future features below.
