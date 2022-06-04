@@ -13,7 +13,7 @@
   import Charts from "./pages/Charts.svelte";
   import CoffeeShopPage from "./pages/CoffeeShopInfoMain.svelte";
 
-  setContext("CoffeeHubService", new CoffeeHubService("http://iewalbjw24b3:4000"));
+  setContext("CoffeeHubService", new CoffeeHubService("https://polar-beach-34658.herokuapp.com"));
 
   let routes = {
     "/": Main,

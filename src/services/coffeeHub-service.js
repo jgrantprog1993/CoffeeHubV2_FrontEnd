@@ -5,7 +5,7 @@ import {coffeeShop} from "../stores";
 
 
 export class CoffeeHubService {
-  baseUrl = "http://iewalbjw24b3:4000";
+  baseUrl = "https://polar-beach-34658.herokuapp.com";
 
   constructor(baseUrl) {
     this.baseUrl = baseUrl;

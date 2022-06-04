@@ -20,7 +20,7 @@ let String = '';
         };
         url = window.location.href
         //  // console.log(url)
-        let parsedURL = url.substring(35)
+        let parsedURL = url.substring(54)
         // console.log('PArsed Url -> ' + parsedURL);
         coffeeShop = await coffeeHubService.getCoffeeShopsById(parsedURL);
         //Thanks to Adam Gibbons for the help with getting around the CORS issue and using https://cors-anywhere.herokuapp.com //

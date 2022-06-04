@@ -11,7 +11,7 @@
     onMount(async () => {
         url = window.location.href
         //  // console.log(url)
-        let parsedURL = url.substring(35)
+        let parsedURL = url.substring(54)
         // console.log('PArsed Url -> ' + parsedURL);
         coffeeShopId = await coffeeHubService.getCoffeeShopsById(parsedURL);
         // console.log('After err? ' + coffeeShopId)
