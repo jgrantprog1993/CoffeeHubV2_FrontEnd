@@ -1,48 +1,49 @@
-# Svelte + Vite
+# Project Name: CoffeeHub 
+Full Stack Web Development - Assignment 2 
+## Project Description: 
+CoffeeHubV2 is a Front-End focused Svelte application. This implementation hits the 'Excellent' Standard of the of the ruberic + 2 items of the 'outstanding' class.
+the remaining 3 items in the ruberic are included in the future features below.
 
-This template should help get you started developing with Svelte in Vite.
+## Technologies Used
+- Svelte
+- Leaflet
+- Frappe Charts
+- svelte spa router
+- Font Awesome
+- Bulma
 
-## Recommended IDE Setup
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+### Infrastructure
+- Heoroku BackEnd app
+- mongo atlas
+- cloudinary
+- openweatherapi
+- Netlify Front End
 
-## Need an official Svelte framework?
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Issues / Items to refactor / Items to update
+- Font on Bar chart for Counties, Note change to a different chart provider as Frappe dont support sideways / angled labels
+- Increase differences with Map1 and Map2
+- Update Marker visually
+- refractor delete image button.
 
-## Technical considerations
+## Future features
+- include Weather Popup icons on the Maps
+- Include clusters on maps when zoom level is above X
+- OAuth
+- Gallary for images
+- Include Trends / Projections (CoffeeShop ratings & Weather)
+- Revamp feel of the app through a new color scheme and page transitions.
 
-**Why use this over SvelteKit?**
+## Pictures from App
+![image](https://user-images.githubusercontent.com/76453989/171969517-c240b7f7-6dbe-4696-a5d7-4dc7dc563209.png)
+![image](https://user-images.githubusercontent.com/76453989/171969528-01949d56-9ff1-4767-8c3e-68bca1d4019d.png)
+![image](https://user-images.githubusercontent.com/76453989/171969632-681c8617-c534-4e08-b187-426f2bfc3366.png)
+![image](https://user-images.githubusercontent.com/76453989/171969654-151df94a-6d5f-4237-912b-284513b690a6.png)
+![image](https://user-images.githubusercontent.com/76453989/171969688-d636bf89-3a3b-4354-8965-f700ecfeac4b.png)
+![image](https://user-images.githubusercontent.com/76453989/171969694-9bc6ff64-8683-4d8c-8eee-242e82d9c127.png)
+![image](https://user-images.githubusercontent.com/76453989/171969677-12c60a08-0b06-405a-8ad8-295873ee28ec.png)
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
